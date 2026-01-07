@@ -1,0 +1,32 @@
+html, body {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 16px; // base um pouco maior
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #ccc; // cinza em tudo
+}
+
+app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+// Aumentar um pouco os títulos
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p, li, button, input, textarea {
+  font-size: 1.5rem;
+}

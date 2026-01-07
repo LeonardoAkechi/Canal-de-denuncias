@@ -1,0 +1,108 @@
+<div class="container">
+  <img src="assets/images/logoeuro.png" alt="Logo Euro" class="logo" style="width:200px;"/>
+
+  <h1>
+    Canal de Denúncias da Eurotextil: Compromisso com um Ambiente de Trabalho Seguro
+  </h1>
+  <p>
+    Para garantir um ambiente de trabalho respeitoso e alinhado às exigências da Lei 14.457/2022, estruturamos nosso canal de denúncias de forma clara e acessível. Abaixo, você encontrará informações essenciais sobre assédio sexual no trabalho, a legislação vigente e como utilizar nosso canal de forma responsável.
+  </p>
+
+  <!-- Bloco 1 -->
+  <div class="section">
+    <div class="circle">1</div>
+    <h2 class="titulo">O que é Assédio Sexual?</h2>
+    <p class="left"><strong>Código Penal Brasileiro</strong> define assédio sexual como: "Constranger alguém com o intuito de obter vantagem ou favorecimento sexual, prevalecendo-se o agente da sua condição de superior hierárquico ou ascendência inerentes ao exercício de emprego, cargo ou função."</p>
+    <h2>Principais tipos de assédio:</h2>
+    <ul>
+      <li><span>🔵</span> <strong>Assédio Por Chantagem:</strong> Quando o assediador condiciona promoções, aumentos salariais ou benefícios à aceitação de investidas sexuais.</li>
+      <li><span>🔵</span> <strong>Assédio Por Intimidação:</strong> Comentários inapropriados, piadas de cunho sexual, contatos físicos inadequados ou qualquer ação que crie um ambiente de trabalho hostil.</li>
+    </ul>
+
+    <h2>📌 Vídeos educativos do Ministério Público do Trabalho:</h2>
+    <div class="videos" style="text-align: left;">
+        <button (click)="abrirVideo('https://www.youtube.com/embed/M_nGxBoVEeY')">🎥 Episódio 1 - Assédio Sexual no Trabalho</button>
+        <button (click)="abrirVideo('https://www.youtube.com/embed/TFS6qbP2oo8')">🎥 Episódio 2 - Assédio Sexual no Trabalho</button>
+        <button (click)="abrirVideo('https://www.youtube.com/embed/60BMgdV6GAA')">🎥 Episódio 3 - Assédio Sexual no Trabalho</button>
+    </div>
+
+    <!-- Modal de Vídeo -->
+    <div class="modal-backdrop" *ngIf="mostrarVideo" (click)="fecharVideo()">
+    <div class="modal-video" (click)="$event.stopPropagation()">
+        <iframe
+        width="100%"
+        height="315"
+        [src]="videoSeguro"
+        frameborder="0"
+        allowfullscreen
+        ></iframe>
+        <button class="fechar" (click)="fecharVideo()">Fechar</button>
+    </div>
+    </div>
+
+
+  </div>
+
+  <!-- Bloco 2 e 3 lado a lado -->
+  <div class="section side-by-side">
+    <div class="left">
+      <div class="circle">2</div>
+      <h3 class="titulo">A Lei e as Empresas</h3>
+      <p>A Lei nº 14.457/2022 determina que empresas com 100 ou mais funcionários adotem medidas contra o assédio sexual e outras formas de violência no trabalho.</p>
+      <h3>Principais obrigações das empresas: </h3>
+      <ul>
+        <li>✅ Canal de Denúncia: Empresas devem disponibilizar um canal seguro e confidencial para denúncias.</li>
+        <li>✅ Sigilo e Proteção: O denunciante deve ter sua identidade protegida</li>
+        <li>✅ Medidas Internas: Os casos denunciados devem ser investigados e tratados de forma justa e eficaz.</li>
+        <li>✅ Treinamento e Conscientização: A empresa deve promover ações preventivas e educacionais para todos os colaboradores.</li>
+      </ul>
+    </div>
+    <div class="right">
+      <div class="circle">3</div>
+      <h3 class="titulo">O Canal de Denúncias da Eurotextil</h3>
+      <p>Nosso canal foi criado para garantir um espaço seguro, respeitoso e sigiloso para todos os colaboradores.</p>
+      <p class="alert">
+        ⚠️ <strong>Importante:</strong> O uso do canal deve ser feito com responsabilidade. Denúncias falsas podem configurar crimes, como:
+      </p>
+      <ul>
+        <li>❌ Denunciação Caluniosa (Art. 339 do Código Penal)</li>
+        <li>❌ Comunicação Falsa de Crime (Art. 340 do Código Penal)</li>
+        <li>❌ Calúnia (Art. 138 do Código Penal)</li>
+        <li>❌ Difamação (Art. 139 do Código Penal)</li>
+        <li>❌ Falso Testemunho (Art. 342 do Código Penal)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Botão final -->
+<div class="cta">
+  <h2>Deseja realizar uma denúncia?</h2>
+  <button (click)="abrirModal()">📩 Clique aqui para registrar sua denúncia de forma segura e confidencial.</button>
+</div>
+
+<!-- Modal funcional -->
+<div class="modal-backdrop" *ngIf="mostrarModal">
+  <div class="modal">
+    <h2>Formulário de Denúncia</h2>
+    
+    <form class="form-denuncia">
+      <div class="linha-nome-setor">
+        <input type="text" name="nome" placeholder="Nome" />
+        <input type="text" name="setor" placeholder="Setor" />
+      </div>
+      
+      <input type="email" name="email" placeholder="E-mail" />
+      
+      <textarea name="denuncia" placeholder="Descreva sua denúncia..." rows="6" required></textarea>
+      
+      <div class="botoes">
+        <button type="submit" class="enviar">Enviar</button>
+        <button type="button" class="fechar" (click)="fecharModal()">Fechar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="rodape-normal">
+  © Eurotextil
+</footer>
