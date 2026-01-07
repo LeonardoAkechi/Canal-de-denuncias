@@ -1,0 +1,2 @@
+import './polyfills.server.mjs';
+import{a as p,b as r,c as n,h as i,k as m,m as a,n as f,q as s,u as c,x as l}from"./chunk-W7YV6ECX.mjs";var o=class t{title="canal-denuncias";static \u0275fac=function(e){return new(e||t)};static \u0275cmp=p({type:t,selectors:[["app-root"]],standalone:!0,features:[n],decls:1,vars:0,template:function(e,x){e&1&&r(0,"router-outlet")},dependencies:[c]})};var u=[];var d={providers:[i({eventCoalescing:!0}),l(u),f()]};var v={providers:[s()]},C=m(d,v);var A=()=>a(o,C),z=A;export{z as a};
